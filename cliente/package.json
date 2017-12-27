@@ -1,0 +1,27 @@
+{
+  "name": "proyecto-2-cliente",
+  "version": "1.0.0",
+  "description": "Segundo proyecto de la materia Sistemas Distribuidos - UCAB Guayana",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^2.12.2",
+    "engine.io": "^3.1.4",
+    "engine.io-client": "^3.1.4",
+    "eureca.io": "^0.7.1"
+  },
+  "keywords": [
+    "almacenamiento",
+    "distribuido",
+    "agentes",
+    "moviles",
+    "cliente"
+  ],
+  "author": "Diego Valdes",
+  "license": "ISC",
+  "bin": {
+    "cliente": "./cli.js"
+  }
+}
