@@ -16,7 +16,7 @@ program
 	.description('Permite obtener todos los valores y sus claves.')
 	.action(function(){
 		client.ready(function (serverProxy) {
-			serverProxy.operacionesServer.getAll(true).onReady(function(result){
+			serverProxy.operacionesServer.getAll().onReady(function(result){
 				if(result == null){
 			    	console.log("Error valor", result);
 			    }else{
@@ -33,7 +33,7 @@ program
 	.description('Permite obtener el valor asociado a una clave previamente creada.')
 	.action(function(key){
 		client.ready(function (serverProxy) {
-			serverProxy.operacionesServer.get(id, null, key).onReady(function(result){
+			serverProxy.operacionesServer.get("cliente", key).onReady(function(result){
 				if(result == null){
 			    	console.log("Error valor", result);
 			    }else{
@@ -50,7 +50,7 @@ program
 	.description('Permite crear o cambiar el valor asociado a una clave.')
 	.action(function(key, value) {
 		client.ready(function (serverProxy) {
-			serverProxy.operacionesServer.set(id, null, key, value).onReady(function(result){
+			serverProxy.operacionesServer.set("cliente", key, value).onReady(function(result){
 				if(result == null){
 			    	console.log("Error al actualizar.", result);
 			    }else{
@@ -68,7 +68,7 @@ program
 	.description('Permite eliminar un par clave-valor de la base de datos.')
 	.action(function(key) {
 		client.ready(function (serverProxy) {
-			serverProxy.operacionesServer.del(id, null, key).onReady(function(result){
+			serverProxy.operacionesServer.del("cliente", key).onReady(function(result){
 				if(result == null){
 			    	console.log("Error al eliminar. Valor:", result);
 			    }else{
