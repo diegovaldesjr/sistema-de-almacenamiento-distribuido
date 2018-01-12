@@ -3,7 +3,7 @@ var app = express();
 var server = require('http').createServer(app);
 
 var ip = require('ip');
-var port = 8000;
+var port = 3000;
 
 var nodos = [];
 //-------------------------------------
@@ -21,7 +21,7 @@ var fs = require('fs');
 var readline = require('readline');
 
 //------------------------------------------
-mongoose.connect('mongodb://localhost/proyecto2-bd1', { useMongoClient: true }, function(err){
+mongoose.connect('mongodb://localhost/proyecto2-bd3', { useMongoClient: true }, function(err){
 	if(err) 
 		console.log("ERROR: conectando a la base de datos. "+err);
 	else{
